@@ -66,8 +66,7 @@ colorPersonalizado.addEventListener('change',
     // Se guarda el color de la rueda en colorActual
     colorActual = colorPersonalizado.value;
     // Completar para que cambie el indicador-de-color al colorActual
-
-
+    colorSeleccionado.style.backgroundColor = colorActual;
   })
 );
 
