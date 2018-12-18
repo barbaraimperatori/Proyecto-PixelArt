@@ -70,5 +70,22 @@ colorPersonalizado.addEventListener('change',
   })
 );
 
+//función para detectar si el mouse está apretado o no
+let detectarSiHayClick;
+
+grillaPixeles.addEventListener('mousedown', hayClick);
+grillaPixeles.addEventListener('mouseup', noHayClick);
+
+function hayClick(e){
+  detectarSiHayClick = true;
+  //console.log('click');
+}
+
+function noHayClick (e){
+  detectarSiHayClick = false;
+  //console.log('no hay click');
+}
+
+
 generarPaletaDeColores();
 generarGrillaDePixeles();
