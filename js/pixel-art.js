@@ -34,6 +34,14 @@ function generarPaletaDeColores() {
   }
 }
 
+//función para crear la grilla de pixeles
+function generarGrillaDePixeles (){
+  for (let i = 0; i < 1750; i++) {
+    let grillaCreada = document.createElement('div');
+    grillaPixeles.appendChild(grillaCreada);
+  }
+}
+
 // Variable para guardar el elemento 'color-personalizado'
 // Es decir, el que se elige con la rueda de color.
 var colorPersonalizado = document.getElementById('color-personalizado');
@@ -49,3 +57,4 @@ colorPersonalizado.addEventListener('change',
 );
 
 generarPaletaDeColores();
+generarGrillaDePixeles();
