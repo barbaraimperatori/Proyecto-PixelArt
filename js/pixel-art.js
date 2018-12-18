@@ -42,6 +42,14 @@ function generarGrillaDePixeles (){
   }
 }
 
+//función para mostrar color seleccionado en el indicador de color
+let colorSeleccionado = document.getElementById('indicador-de-color');
+paleta.addEventListener('click', mostrarColorSeleccionado);
+
+function mostrarColorSeleccionado(e){
+    colorSeleccionado.style.backgroundColor = e.target.style.backgroundColor;
+}
+
 // Variable para guardar el elemento 'color-personalizado'
 // Es decir, el que se elige con la rueda de color.
 var colorPersonalizado = document.getElementById('color-personalizado');
