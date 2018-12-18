@@ -20,6 +20,10 @@ var nombreColores = ['White', 'LightYellow',
   'DimGray', 'LightSlateGray', 'DarkSlateGray', 'Black'
 ];
 
+//variables para guardar los elementos paleta y grilla-pixeles
+const paleta = document.getElementById('paleta');
+const grillaPixeles = document.getElementById('grilla-pixeles');
+
 // Variable para guardar el elemento 'color-personalizado'
 // Es decir, el que se elige con la rueda de color.
 var colorPersonalizado = document.getElementById('color-personalizado');
