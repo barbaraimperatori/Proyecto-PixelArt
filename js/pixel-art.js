@@ -86,6 +86,15 @@ function noHayClick (e){
   //console.log('no hay click');
 }
 
+//función para pintar en movimiento
+grillaPixeles.addEventListener('mouseover', pintarEnMovimiento);
+
+function pintarEnMovimiento (e){
+  if(detectarSiHayClick){
+    e.target.style.backgroundColor = colorSeleccionado.style.backgroundColor;
+  }
+}
+
 
 generarPaletaDeColores();
 generarGrillaDePixeles();
