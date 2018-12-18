@@ -24,12 +24,22 @@ var nombreColores = ['White', 'LightYellow',
 const paleta = document.getElementById('paleta');
 const grillaPixeles = document.getElementById('grilla-pixeles');
 
+//función para generar paleta de colores dinámicamente creando un div por cada color asignando un background color y una clase
+function generarPaletaDeColores() {
+  for (let i = 0; i < nombreColores.length; i++) {
+    let coloresRecorridos = document.createElement('div');
+    coloresRecorridos.className = 'color-paleta';
+    coloresRecorridos.style.backgroundColor = nombreColores[i];
+    paleta.appendChild(coloresRecorridos);
+  }
+}
+
 // Variable para guardar el elemento 'color-personalizado'
 // Es decir, el que se elige con la rueda de color.
 var colorPersonalizado = document.getElementById('color-personalizado');
 
-colorPersonalizado.addEventListener('change', 
-  (function() {
+colorPersonalizado.addEventListener('change',
+  (function () {
     // Se guarda el color de la rueda en colorActual
     colorActual = colorPersonalizado.value;
     // Completar para que cambie el indicador-de-color al colorActual
@@ -37,3 +47,5 @@ colorPersonalizado.addEventListener('change',
 
   })
 );
+
+generarPaletaDeColores();
