@@ -50,6 +50,13 @@ function mostrarColorSeleccionado(e){
     colorSeleccionado.style.backgroundColor = e.target.style.backgroundColor;
 }
 
+//función para pintar un pixel de la grilla
+grillaPixeles.addEventListener('click', pintarPixel);
+
+function pintarPixel (e){
+  e.target.style.backgroundColor = colorSeleccionado.style.backgroundColor;
+}
+
 // Variable para guardar el elemento 'color-personalizado'
 // Es decir, el que se elige con la rueda de color.
 var colorPersonalizado = document.getElementById('color-personalizado');
