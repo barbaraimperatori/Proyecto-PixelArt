@@ -95,6 +95,16 @@ function pintarEnMovimiento (e){
   }
 }
 
+//función para borrar la pantalla con un botón TODAVÍA NO FUNCIONA
+$(document).ready(function borrarGrilla (){
+  $('#borrar').click(function(){
+    const pixelesParaBorrar = $('grilla-pixeles').find('div');
+    $(pixelesParaBorrar).fadeOut(5);
+    //generarGrillaDePixeles();
+  })
+})
+
 
 generarPaletaDeColores();
 generarGrillaDePixeles();
+borrarGrilla();
