@@ -95,14 +95,22 @@ function pintarEnMovimiento (e){
   }
 }
 
-//función para borrar la pantalla con un botón TODAVÍA NO FUNCIONA
-$(document).ready(function borrarGrilla (){
-  $('#borrar').click(function(){
-    const pixelesParaBorrar = $('grilla-pixeles').find('div');
-    $(pixelesParaBorrar).fadeOut(5);
-    //generarGrillaDePixeles();
-  })
-})
+//función para borrar la pantalla con un botón
+function borrarGrilla(){
+  $("button").click(function(){
+    const pixelesParaBorrar = $("#grilla-pixeles").find("div");
+    $(pixelesParaBorrar).fadeOut(15);
+    generarGrillaDePixeles();
+    }
+  );
+  }
+
+//función para cargar superhéroes en la grilla
+  //prueba
+  let superheroeEnElDOM = document.getElementsByTagName('img');
+  for (let i = 0; i < superheroeEnElDOM.length; i++) {
+    let element = superheroeEnElDOM[i];
+  }
 
 
 generarPaletaDeColores();
