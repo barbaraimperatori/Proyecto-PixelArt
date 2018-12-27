@@ -97,7 +97,7 @@ function pintarEnMovimiento (e){
 
 //función para borrar la pantalla con un botón
 function borrarGrilla(){
-  $("button").click(function(){
+  $("#borrar").click(function(){
     const pixelesParaBorrar = $("#grilla-pixeles").find("div");
     $(pixelesParaBorrar).fadeOut(15);
     generarGrillaDePixeles();
