@@ -35,7 +35,7 @@ function generarPaletaDeColores() {
 }
 
 //función para crear la grilla de pixeles
-function generarGrillaDePixeles (){
+function generarGrillaDePixeles() {
   for (let i = 0; i < 1750; i++) {
     let grillaCreada = document.createElement('div');
     grillaPixeles.appendChild(grillaCreada);
@@ -46,14 +46,14 @@ function generarGrillaDePixeles (){
 let colorSeleccionado = document.getElementById('indicador-de-color');
 paleta.addEventListener('click', mostrarColorSeleccionado);
 
-function mostrarColorSeleccionado(e){
-    colorSeleccionado.style.backgroundColor = e.target.style.backgroundColor;
+function mostrarColorSeleccionado(e) {
+  colorSeleccionado.style.backgroundColor = e.target.style.backgroundColor;
 }
 
 //función para pintar un pixel de la grilla
 grillaPixeles.addEventListener('click', pintarPixel);
 
-function pintarPixel (e){
+function pintarPixel(e) {
   e.target.style.backgroundColor = colorSeleccionado.style.backgroundColor;
 }
 
@@ -76,12 +76,12 @@ let detectarSiHayClick;
 grillaPixeles.addEventListener('mousedown', hayClick);
 grillaPixeles.addEventListener('mouseup', noHayClick);
 
-function hayClick(e){
+function hayClick(e) {
   detectarSiHayClick = true;
   //console.log('click');
 }
 
-function noHayClick (e){
+function noHayClick(e) {
   detectarSiHayClick = false;
   //console.log('no hay click');
 }
@@ -89,29 +89,41 @@ function noHayClick (e){
 //función para pintar en movimiento
 grillaPixeles.addEventListener('mouseover', pintarEnMovimiento);
 
-function pintarEnMovimiento (e){
-  if(detectarSiHayClick){
+function pintarEnMovimiento(e) {
+  if (detectarSiHayClick) {
     e.target.style.backgroundColor = colorSeleccionado.style.backgroundColor;
   }
 }
 
 //función para borrar la pantalla con un botón
-function borrarGrilla(){
-  $("#borrar").click(function(){
+function borrarGrilla() {
+  $("#borrar").click(function () {
     const pixelesParaBorrar = $("#grilla-pixeles").find("div");
-    $(pixelesParaBorrar).fadeOut(10);
+    $(pixelesParaBorrar).fadeOut();
     generarGrillaDePixeles();
-    }
-  );
-  }
+  });
+}
 
 //función para cargar superhéroes en la grilla
-  //prueba
-  let superheroeEnElDOM = document.getElementsByTagName('img');
-  for (let i = 0; i < superheroeEnElDOM.length; i++) {
-    let element = superheroeEnElDOM[i];
-  }
+let pixelBatman = document.getElementById('batman');
+pixelBatman.addEventListener('click', function () {
+  cargarSuperheroe(batman)
+});
 
+let pixelWonder = document.getElementById('wonder');
+pixelWonder.addEventListener('click', function(){
+  cargarSuperheroe(wonder)
+});
+
+let pixelFlash = document.getElementById('flash');
+pixelFlash.addEventListener('click', function(){
+  cargarSuperheroe(flash)
+});
+
+let pixelInvisible = document.getElementById('invisible');
+pixelInvisible.addEventListener('click', function(){
+  cargarSuperheroe(invisible)
+});
 
 generarPaletaDeColores();
 generarGrillaDePixeles();
