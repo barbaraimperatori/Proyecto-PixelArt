@@ -99,7 +99,7 @@ function pintarEnMovimiento (e){
 function borrarGrilla(){
   $("#borrar").click(function(){
     const pixelesParaBorrar = $("#grilla-pixeles").find("div");
-    $(pixelesParaBorrar).fadeOut(15);
+    $(pixelesParaBorrar).fadeOut(10);
     generarGrillaDePixeles();
     }
   );
